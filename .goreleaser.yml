@@ -25,8 +25,7 @@ release:
 
   # You can change the name of the release.
   # Default is `{{.Tag}}`
-  name_template: "{{.ProjectName}}-v{{.Version}} {{.Env.USER}}"
-
+  # name_template: "{{.ProjectName}}-v{{.Version}} {{.Env.USER}}"
   # You can disable this pipe in order to not upload any artifacts.
   # Defaults to false.
   #disable: true
