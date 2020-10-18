@@ -1,4 +1,21 @@
 # .goreleaser.yml proposed options for Romie
+# .goreleaser.yml
+release:
+  # Repo in which the release will be created.
+  # Default is extracted from the origin remote URL or empty if its private hosted.
+  # Note: it can only be one: either github, gitlab or gitea
+  github:
+    owner: cerebrux
+    name: romie
+
+  # You can change the name of the release.
+  # Default is `{{.Tag}}`
+  name_template: "{{.ProjectName}}-v{{.Version}} {{.Env.USER}}"
+
+  # You can disable this pipe in order to not upload any artifacts.
+  # Defaults to false.
+  # disable: true
+  
 builds:
   - env:
       - CGO_ENABLED=0
