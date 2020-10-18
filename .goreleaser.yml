@@ -9,7 +9,15 @@ release:
   # You can change the name of the release.
   # Default is `{{.Tag}}`
   name_template: "{{.ProjectName}}-v{{.Version}}"
-  
+changelog:
+  sort: asc
+#  filters:
+#    exclude:
+#    - '^docs:'
+#    - '^test:'
+#    - Merge pull request
+#    - Merge branch
+#    - go mod tidy  
 builds:
   - env:
       - CGO_ENABLED=0
